@@ -1,0 +1,98 @@
+.hero-section {
+  display: flex;
+}
+
+.hero-section > .left-side {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.25rem;
+}
+
+.hero-section > .left-side > .greeting {
+  color: var(--clr-300);
+}
+
+.hero-section > .left-side > .name {
+  color: var(--clr-100);
+}
+
+.hero-section > .left-side > .tagline {
+  color: var(--clr-100);
+  font-weight: bold;
+}
+
+.hero-section > .left-side > .intro {
+  color: var(--clr-100);
+  line-height: 130%;
+}
+
+.hero-section > .left-side > .hero-cta-container {
+  display: flex;
+}
+
+.hero-section > .right-side > img {
+  width: 32rem;
+}
+
+.scroll-animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: var(--clr-920);
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    margin-block-start: 4rem;
+    padding-inline: 4rem;
+    padding-block-start: 2rem;
+  }
+  .hero-section > .left-side {
+    gap: 2rem;
+  }
+  .hero-section > .left-side > .greeting {
+    font-size: 1.5rem;
+  }
+  .hero-section > .left-side > .name {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .hero-section > .left-side > .tagline {
+    font-size: 1.5rem;
+  }
+  .hero-section > .left-side > .intro {
+    font-size: 1.1rem;
+  }
+  .hero-section > .left-side > .hero-cta-container {
+    gap: 2rem;
+  }
+  .scroll-to-top {
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .scroll-to-top > img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+}
+
+@media (max-width: 768px) {
+}
