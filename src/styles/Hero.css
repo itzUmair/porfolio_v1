@@ -144,13 +144,13 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    margin-block-start: 4rem;
     padding-inline: 1rem;
-    padding-block-start: 2rem;
-    /* flex-direction: column-reverse; */
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
   }
   .hero-section > .left-side {
-    gap: 1.25rem;
+    gap: 2rem;
   }
   .hero-section > .left-side > .greeting {
     font-size: 1rem;
@@ -166,8 +166,8 @@
     font-size: 1rem;
   }
   .hero-section > .left-side > .hero-cta-container {
+    padding-block-start: 3rem;
     gap: 1rem;
-    margin-bottom: 3rem;
   }
   .scroll-to-top {
     bottom: 2rem;
