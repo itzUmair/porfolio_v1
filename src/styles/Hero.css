@@ -98,7 +98,8 @@
     margin-block-start: 4rem;
     padding-inline: 5rem;
     padding-block-start: 2rem;
-    flex-direction: column-reverse;
+    align-items: center;
+    height: 85vh;
   }
   .hero-section > .left-side {
     gap: 2rem;
@@ -145,9 +146,8 @@
 @media (max-width: 768px) {
   .hero-section {
     padding-inline: 1rem;
-    justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
   }
   .hero-section > .left-side {
     gap: 2rem;
@@ -166,7 +166,7 @@
     font-size: 1rem;
   }
   .hero-section > .left-side > .hero-cta-container {
-    padding-block-start: 3rem;
+    padding-block-start: 2rem;
     gap: 1rem;
   }
   .scroll-to-top {
