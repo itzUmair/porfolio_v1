@@ -147,10 +147,10 @@
     margin-block-start: 4rem;
     padding-inline: 2rem;
     padding-block-start: 2rem;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
   }
   .hero-section > .left-side {
-    gap: 2rem;
+    gap: 1.25rem;
   }
   .hero-section > .left-side > .greeting {
     font-size: 1rem;
@@ -183,10 +183,10 @@
 
   .hero-section > .right-side {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .hero-section > .right-side > img {
-    width: 15rem;
+    width: 10rem;
   }
 }
