@@ -108,7 +108,7 @@
     top: 4rem;
     width: 60vw;
     height: calc(100vh - 4rem);
-    transform: translateX(20rem);
+    transform: translateX(120rem);
     transition: transform 300ms ease-in-out;
   }
 

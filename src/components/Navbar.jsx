@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../assets/logo.svg";
 import Menu from "../assets/hamburger.svg";
 import Close from "../assets/close.svg";
@@ -12,6 +12,16 @@ const Navbar = ({
   contactRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setMenuOpen(false);
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        setMenuOpen(false);
+      });
+    };
+  }, []);
   return (
     <nav className="navbar-container">
       <img
