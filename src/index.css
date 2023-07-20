@@ -92,7 +92,23 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+  .button-filled {
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+  }
+  .button-hollow {
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .button-filled {
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+  }
+  .button-hollow {
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+  }
 }
