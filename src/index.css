@@ -74,6 +74,18 @@ body {
   border-radius: 0.1875rem;
 }
 
+.page-title {
+  color: var(--clr-300);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.page-secondary-title {
+  color: var(--clr-300);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 @media (min-width: 2560px) {
   body {
     max-width: 1440px;

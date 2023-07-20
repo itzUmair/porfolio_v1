@@ -1,11 +1,14 @@
 .hero-section {
   display: flex;
+  justify-content: center;
 }
 
 .hero-section > .left-side {
   display: flex;
   flex-direction: column;
   letter-spacing: 0.25rem;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-section > .left-side > .greeting {
@@ -56,9 +59,12 @@
     margin-block-start: 4rem;
     padding-inline: 4rem;
     padding-block-start: 2rem;
+    height: 80vh;
   }
   .hero-section > .left-side {
     gap: 2rem;
+    justify-content: center;
+    max-width: 100ch;
   }
   .hero-section > .left-side > .greeting {
     font-size: 1.5rem;
@@ -148,6 +154,7 @@
     padding-inline: 1rem;
     align-items: center;
     height: 85vh;
+    margin-block-start: 4rem;
   }
   .hero-section > .left-side {
     gap: 2rem;

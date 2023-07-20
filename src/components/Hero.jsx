@@ -26,11 +26,11 @@ const Hero = ({ scrollToRef, contactRef }) => {
             <button className="button-hollow">Resume</button>
           </div>
         </div>
-        {window.innerWidth > 1023 && (
+        {/* {window.innerWidth > 1023 && (
           <div className="right-side">
             <img src={HeroImage} alt="hero image" />
           </div>
-        )}
+        )} */}
       </section>
       <div className="scroll-animation-container">
         <img src={ScrollAnimation} alt="" className="scroll-animation" />
