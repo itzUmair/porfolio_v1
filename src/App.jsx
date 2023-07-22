@@ -26,16 +26,12 @@ function App() {
     <main>
       <Navbar
         scrollToRef={scrollToRef}
-        aboutRef={aboutRef}
-        technologiesRef={technologiesRef}
-        projectsRef={projectsRef}
-        contactRef={contactRef}
+        // aboutRef={aboutRef}
       />
       <Hero />
       <About aboutRef={aboutRef} />
-      <Technologies ref={technologiesRef} />
-      <Projects ref={projectsRef} />
-      <Contact ref={contactRef} />
+      <Projects projectsRef={projectsRef} />
+      <Contact contactRef={contactRef} />
       <Footer />
     </main>
   );

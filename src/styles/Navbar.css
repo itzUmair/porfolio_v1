@@ -1,41 +1,44 @@
-@import url("../index.css");
-
 .navbar-container {
   display: flex;
   align-items: center;
-  position: relative;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
-.navbar-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr-910);
-  backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
-.navbar-container > .nav-menu-container > .nav-menu {
-  list-style: none;
+.navbar-container > .nav-menu-container > .nav-menu,
+.navbar-container > .mobile-nav-menu-container > .nav-menu {
+  list-style: None;
+  color: var(--clr-300);
   display: flex;
-  color: var(--clr-100);
+  gap: 2rem;
+  font-weight: bold;
 }
 
 .navbar-container > .nav-menu-container > .nav-menu > li {
   cursor: pointer;
-  transition: color 300ms ease-in-out;
+  position: relative;
 }
 
-.navbar-container > .nav-menu-container > .nav-menu > li:hover,
-.navbar-container > .nav-menu-container > .nav-menu > li:focus {
-  color: var(--clr-300);
+.navbar-container > .nav-menu-container > .nav-menu > li::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--clr-300);
+  transform: scaleX(0);
+  transition: transform 300ms ease-in;
+  transform-origin: right;
+}
+
+.navbar-container > .nav-menu-container > .nav-menu > li:hover::after,
+.navbar-container > .nav-menu-container > .nav-menu > li:focus::after {
+  transform: scaleX(100%);
+  transform-origin: left;
+}
+
+.navbar-container > .nav-button {
+  display: none;
 }
 
 @media (min-width: 2560px) {
@@ -48,75 +51,52 @@
 @media (min-width: 1024px) {
   .navbar-container {
     padding-inline: 4rem;
-    padding-block: 1rem;
-    height: 4rem;
-  }
-  .navbar-container > img {
-    width: 2.5rem;
-  }
-  .navbar-container > .nav-menu-container > .nav-menu {
-    flex-direction: row;
-    gap: 2rem;
+    padding-block: 0.5rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
   .navbar-container {
-    padding-inline: 5rem;
-    padding-block: 1rem;
-    height: 4rem;
-  }
-  .navbar-container > img {
-    width: 2.5rem;
-  }
-  .navbar-container > .nav-menu-container > .nav-menu {
-    flex-direction: row;
-    gap: 2rem;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .navbar-container {
     padding-inline: 1rem;
-    padding-block: 1rem;
-    height: 4rem;
+    padding-block: 0.5rem;
   }
-  .navbar-container > img {
-    width: 2.5rem;
+  .navbar-container > .logo {
+    width: 2rem;
   }
-
-  .navbar-container > .overlay {
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    width: 41vw;
-    height: 100vh;
-    background-color: var(--clr-910);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 400ms ease-in-out;
-  }
-  .navbar-container > .overlay.active {
-    opacity: 1;
+  .navbar-container > .nav-button {
+    display: block;
+    width: 2rem;
+    z-index: 1;
   }
 
-  .navbar-container > .nav-menu-container {
-    background-color: var(--clr-910);
-    backdrop-filter: blur(10px);
+  .navbar-container > .mobile-nav-menu-container {
     position: absolute;
+    top: 0;
     right: 0;
-    top: 4rem;
-    width: 60vw;
-    height: calc(100vh - 4rem);
-    transform: translateX(120rem);
-    transition: transform 300ms ease-in-out;
+    background-color: var(--clr-300);
+    width: 40vw;
+    height: 100vh;
+  }
+  .menu-primary-enter {
+    transform: translateX(110%);
+  }
+  .menu-primary-enter-active {
+    transform: translateX(0%);
+    transition: transform 300ms ease;
+  }
+  .menu-primary-exit-active {
+    transform: translateX(110%);
+    transition: transform 300ms ease;
   }
 
-  .navbar-container > .nav-menu-container.active {
-    transform: translateX(0);
-  }
-
-  .navbar-container > .nav-menu-container > .nav-menu {
+  .navbar-container > .mobile-nav-menu-container > .nav-menu {
     position: absolute;
     right: 2rem;
     top: 4rem;
@@ -124,13 +104,6 @@
     align-items: flex-end;
     padding-block-start: 2rem;
     gap: 2rem;
-  }
-
-  .navbar-container > .nav-menu-container > .nav-menu > li {
-    font-size: 1.5rem;
-  }
-  .navbar-container > .nav-button {
-    width: 2rem;
-    object-fit: cover;
+    color: var(--clr-100);
   }
 }
