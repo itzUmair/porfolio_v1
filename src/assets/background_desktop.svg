@@ -5,8 +5,6 @@
 <g mask="url(#mask0_58_867)">
 <rect x="778" y="629.322" width="300.6" height="95.4" fill="#8A4FFF" fill-opacity="0.2"/>
 </g>
-<rect x="738" y="799" width="33" height="56" rx="16.5" fill="#8A4FFF"/>
-<circle cx="754.5" cy="837.5" r="10.5" fill="#F1FAEE"/>
 <mask id="mask1_58_867" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="101" y="72" width="203" height="132">
 <rect x="101" y="128.234" width="187.933" height="78.6695" transform="rotate(-17.411 101 128.234)" fill="url(#pattern1)"/>
 </mask>

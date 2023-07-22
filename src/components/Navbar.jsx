@@ -12,9 +12,6 @@ const Navbar = ({ scrollToRef, aboutRef, projectsRef, contactRef }) => {
     window.addEventListener("scroll", () => {
       setMenuOpen(false);
     });
-    // window.addEventListener("resize", () => {
-    //   window.location.reload();
-    // });
     return () => {
       window.removeEventListener("scroll", () => {
         setMenuOpen(false);
