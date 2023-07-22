@@ -71,11 +71,11 @@
     padding-block: 0.5rem;
   }
   .navbar-container > .logo {
-    width: 1.5rem;
+    width: 1.75rem;
   }
   .navbar-container > .nav-button {
     display: block;
-    width: 1.5rem;
+    width: 1.75rem;
     z-index: 1;
   }
 
