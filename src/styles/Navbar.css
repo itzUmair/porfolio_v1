@@ -53,6 +53,9 @@
     padding-inline: 4rem;
     padding-block: 0.5rem;
   }
+  .navbar-container > .logo {
+    width: 3rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -68,11 +71,11 @@
     padding-block: 0.5rem;
   }
   .navbar-container > .logo {
-    width: 2rem;
+    width: 1.5rem;
   }
   .navbar-container > .nav-button {
     display: block;
-    width: 2rem;
+    width: 1.5rem;
     z-index: 1;
   }
 

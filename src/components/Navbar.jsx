@@ -12,9 +12,9 @@ const Navbar = ({ scrollToRef, aboutRef, projectsRef, contactRef }) => {
     window.addEventListener("scroll", () => {
       setMenuOpen(false);
     });
-    window.addEventListener("resize", () => {
-      window.location.reload();
-    });
+    // window.addEventListener("resize", () => {
+    //   window.location.reload();
+    // });
     return () => {
       window.removeEventListener("scroll", () => {
         setMenuOpen(false);
@@ -26,7 +26,7 @@ const Navbar = ({ scrollToRef, aboutRef, projectsRef, contactRef }) => {
       <img
         src={Logo}
         alt="umair"
-        className=""
+        className="logo"
         onClick={() =>
           window.scrollTo({
             top: 0,
