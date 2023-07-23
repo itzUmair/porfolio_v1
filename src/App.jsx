@@ -28,7 +28,11 @@ function App() {
         projectsRef={projectsRef}
         contactRef={contactRef}
       />
-      <Hero />
+      <Hero
+        scrollToRef={scrollToRef}
+        projectsRef={projectsRef}
+        aboutRef={aboutRef}
+      />
       <About aboutRef={aboutRef} />
       <Projects projectsRef={projectsRef} />
       <Contact contactRef={contactRef} />

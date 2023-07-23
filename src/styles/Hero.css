@@ -39,6 +39,10 @@
   display: flex;
 }
 
+.hero-section > .scrollAnimation {
+  cursor: pointer;
+}
+
 @media (min-width: 2560px) {
 }
 
