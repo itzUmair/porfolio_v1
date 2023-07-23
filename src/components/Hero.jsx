@@ -35,7 +35,10 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
         <button className="cta-button" onClick={() => scrollToRef(projectsRef)}>
           My Work
         </button>
-        <button className="cta-button" onClick={() => navigate("/resume")}>
+        <button
+          className="cta-button"
+          onClick={() => window.open("/resume", "_blank")}
+        >
           Resume
         </button>
       </div>

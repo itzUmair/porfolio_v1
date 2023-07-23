@@ -1,7 +1,10 @@
-const Loader = () => {
+import "../styles/Loader.css";
+const Loader = ({ message }) => {
   return (
-    // <img /> TODO: add a loader svg with animations
-    <p>Loading</p>
+    <div className="loader-container">
+      {/*<img /> TODO: add a loader svg with animations*/}
+      <p className="loading-message">{message}</p>
+    </div>
   );
 };
 

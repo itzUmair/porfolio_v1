@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Loader } from "./index.js";
 import axios from "../api/axios.js";
 import "../styles/ResumePage.css";
@@ -6,28 +6,37 @@ import "../styles/ResumePage.css";
 const ResumePage = () => {
   const [resumeURL, setResumeURL] = useState("");
   const [loading, setLoading] = useState(true);
+  const [iframeLoading, setIframeLoading] = useState(false);
+  const iframeRef = useRef(null);
+
   useEffect(() => {
     const getResume = async () => {
       const resumeURL = await axios.get("getResume");
-      setLoading(false);
       setResumeURL(resumeURL.data.data);
+      setLoading(false);
+      setIframeLoading(true);
     };
     getResume();
   }, []);
+
+  const handleIframeLoad = () => {
+    setIframeLoading(false);
+  };
   return (
-    <>
-      {loading && <Loader />}
+    <div className="resume-container">
+      {loading && <Loader message="fetching resume" />}
+      {iframeLoading && <Loader message="getting things ready" />}
       {!loading && (
-        <div className="resume-container">
-          <iframe
-            src={resumeURL}
-            width="100%"
-            height="100%"
-            title="PDF Viewer"
-          />
-        </div>
+        <iframe
+          src={resumeURL}
+          width="100%"
+          height="100%"
+          title="Resume Viewer"
+          ref={iframeRef}
+          onLoad={handleIframeLoad}
+        />
       )}
-    </>
+    </div>
   );
 };
 
