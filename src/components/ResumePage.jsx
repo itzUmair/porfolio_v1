@@ -1,18 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Loader } from "./index.js";
+import axios from "../api/axios.js";
 import "../styles/ResumePage.css";
 
 const ResumePage = () => {
+  const [resumeURL, setResumeURL] = useState("");
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const getResume = async () => {
+      const resumeURL = await axios.get("getResume");
+      setLoading(false);
+      setResumeURL(resumeURL.data.data);
+    };
+    getResume();
+  }, []);
   return (
-    <div className="resume-container">
-      <iframe
-        src={
-          "https://firebasestorage.googleapis.com/v0/b/portfolio-b576f.appspot.com/o/Umair_CV%20(1).pdf?alt=media&token=63a6b067-8ad1-41eb-9d1a-7ba1867fd9d9"
-        }
-        width="100%"
-        height="100%"
-        title="PDF Viewer"
-      />
-    </div>
+    <>
+      {loading && <Loader />}
+      {!loading && (
+        <div className="resume-container">
+          <iframe
+            src={resumeURL}
+            width="100%"
+            height="100%"
+            title="PDF Viewer"
+          />
+        </div>
+      )}
+    </>
   );
 };
 

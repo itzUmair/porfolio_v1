@@ -2,17 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
-import {
-  AllProjects,
-  PageNotFound,
-  ResumePage,
-  PreloadResume,
-} from "./components/index.js";
+import { AllProjects, PageNotFound, ResumePage } from "./components/index.js";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <PreloadResume /> */}
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
