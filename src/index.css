@@ -3,6 +3,7 @@
 
   --clr-100: #f1faee;
   --clr-300: #8a4fff;
+  --clr-310: #7343d5;
   --clr-500: #587c71;
   --clr-900: #0f1108;
 }
@@ -34,6 +35,21 @@ body {
   background-color: var(--clr-100);
 }
 
+.cta-button {
+  background-color: var(--clr-300);
+  border: none;
+  outline: none;
+  color: var(--clr-100);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 300ms ease-in;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: var(--clr-310);
+}
+
 @media (min-width: 2560px) {
   body {
     max-width: 1440px;
@@ -42,10 +58,22 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .cta-button {
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+  .cta-button {
+    border-radius: 0.8rem;
+    padding: 0.8rem 1.75rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .cta-button {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
 }

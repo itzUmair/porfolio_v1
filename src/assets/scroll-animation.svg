@@ -1,0 +1,15 @@
+<svg width="24" height="45" viewBox="0 0 24 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="scroll-animation">
+    <rect id="Rectangle7" width="24" height="45" rx="12" fill="#8a4fff" />
+    <circle id="Ellipse" cx="12" cy="32" r="9" fill="#f1faee">
+      <animate
+        attributeName="cy"
+        values="32; 12; 32; 32; 32;"
+        keyTimes="0; 0.1; 0.5; 0.7; 1"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+      <set attributeName="cy" to="32" dur="0.5s" begin="2s" />
+    </circle>
+  </g>
+</svg>

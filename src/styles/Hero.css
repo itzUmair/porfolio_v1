@@ -4,6 +4,39 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  user-select: none;
+}
+
+.hero-section > .hero-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section > .hero-data-container > h1 {
+  font-weight: bold;
+  color: var(--clr-300);
+}
+
+.hero-section > .hero-data-container > h2 {
+  color: var(--clr-900);
+}
+
+.hero-section > .hero-data-container > h2 > span {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: var(--clr-300);
+  text-decoration-thickness: 0.2rem;
+}
+
+.hero-section > .hero-data-container > h3 {
+  color: var(--clr-900);
+}
+
+.hero-section > .cta-container {
+  display: flex;
 }
 
 @media (min-width: 2560px) {
@@ -11,12 +44,31 @@
 
 @media (min-width: 1024px) {
   .hero-section {
+    gap: 2rem;
     height: calc(100vh - 4rem);
     background-image: url("../assets/background_desktop.svg");
     background-size: contain;
     background-position: center;
     background-repeat: repeat;
-    transition: background-position 2000ms ease-out;
+    transition: background-position 3s ease-out;
+  }
+  .hero-section > .scrollAnimation {
+    width: 1rem;
+  }
+  .hero-section > .hero-data-container > h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section > .hero-data-container > h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section > .hero-data-container > h3 {
+    font-size: 1rem;
+  }
+  .hero-section > .cta-container {
+    gap: 1.5rem;
+    margin-block: 2rem;
   }
 }
 
@@ -28,16 +80,78 @@
 
 @media (min-width: 769px) and (max-width: 1023px) {
   .hero-section {
+    gap: 2rem;
     height: calc(100vh - 4rem);
+    background-image: url("../assets/background_desktop.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    animation: moveBG 30s ease-in-out infinite alternate;
+  }
+  .hero-section > .scrollAnimation {
+    width: 1rem;
+  }
+  .hero-section > .hero-data-container > h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section > .hero-data-container > h2 {
+    font-size: 1rem;
+  }
+
+  .hero-section > .hero-data-container > h3 {
+    font-size: 0.8rem;
+  }
+  .hero-section > .cta-container {
+    gap: 1rem;
+    margin-block: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero-section {
+    gap: 2rem;
     height: calc(100vh - 3rem);
     background-image: url("../assets/background_mobile.svg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    animation: moveBG 30s ease-in-out infinite alternate;
+  }
+  .hero-section > .scrollAnimation {
+    width: 1rem;
+  }
+  .hero-section > .hero-data-container > h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section > .hero-data-container > h2 {
+    font-size: 1rem;
+  }
+
+  .hero-section > .hero-data-container > h3 {
+    font-size: 0.8rem;
+  }
+  .hero-section > .cta-container {
+    gap: 1rem;
+    margin-block: 1rem;
+  }
+}
+
+@keyframes moveBG {
+  0% {
+    background-position: 0rem 0rem;
+  }
+  25% {
+    background-position: -2rem 3rem;
+  }
+  50% {
+    background-position: 0rem -2rem;
+  }
+  75% {
+    background-position: 3rem 2rem;
+  }
+  100% {
+    background-position: 0rem 0rem;
   }
 }
