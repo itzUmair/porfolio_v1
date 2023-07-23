@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import ScrollAnimation from "../assets/scroll-animation.svg";
-import { storageRef, download } from "../firebase/firebase.js";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/Hero.css";
 const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
-  const [resumeURL, setResumeURL] = useState("");
+  const navigate = useNavigate();
   const moveBG = (e) => {
     let oldPos = { x: 0, y: 0 };
     let x = Math.round(e.offsetX * 0.08);
@@ -22,13 +22,6 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
     return () => window.removeEventListener("mousemove", moveBG);
   });
 
-  const getResume = async () => {
-    const URL = await download(storageRef);
-    setResumeURL(URL);
-  };
-
-  getResume();
-
   return (
     <section className="hero-section idle-animation">
       <div className="hero-data-container">
@@ -42,10 +35,7 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
         <button className="cta-button" onClick={() => scrollToRef(projectsRef)}>
           My Work
         </button>
-        <button
-          className="cta-button"
-          onClick={() => window.open(resumeURL, "_blank")}
-        >
+        <button className="cta-button" onClick={() => navigate("/resume")}>
           Resume
         </button>
       </div>
