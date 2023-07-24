@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ScrollAnimation from "../assets/scroll-animation.svg";
-import { useNavigate } from "react-router-dom";
+import Resume from "../assets/resume-icon.svg";
+import Github from "../assets/github-logo.svg";
+import Linkedin from "../assets/linkedin-logo.svg";
+import Gmail from "../assets/gmail-logo.svg";
 
 import "../styles/Hero.css";
 const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
-  const navigate = useNavigate();
   const moveBG = (e) => {
     let oldPos = { x: 0, y: 0 };
     let x = Math.round(e.offsetX * 0.08);
@@ -23,7 +25,7 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
   });
 
   return (
-    <section className="hero-section idle-animation">
+    <section className="hero-section">
       <div className="hero-data-container">
         <h3>Hi, my name is</h3>
         <h1>Muhammad Umair Khan</h1>
@@ -48,6 +50,28 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
         className="scrollAnimation"
         onClick={() => scrollToRef(aboutRef)}
       />
+      <div className="social-links-container">
+        <a href="/resume" target="_blank" rel="noreferrer">
+          <img src={Resume} alt="resume" />
+        </a>
+        <a href="https://github.com/itzUmair" target="_blank" rel="noreferrer">
+          <img src={Github} alt="github" />
+        </a>
+        <a
+          href="https://linkedin.com/in/umair2511"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Linkedin} alt="linkedin" />
+        </a>
+        <a
+          href={"mailto:muhammadumair2511@gmail.com"}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Gmail} alt="Gmail" />
+        </a>
+      </div>
     </section>
   );
 };

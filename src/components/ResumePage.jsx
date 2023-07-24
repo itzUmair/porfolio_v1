@@ -23,7 +23,7 @@ const ResumePage = () => {
       <Navbar />
       {!loading && (
         <>
-          <button onClick={() => window.open(resumeURL)}>PDF</button>
+          <button onClick={() => window.open(resumeURL)}>Download PDF</button>
           <img src={resumeJPG} alt="resume" className="resume" />
         </>
       )}
