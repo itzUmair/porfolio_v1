@@ -1,44 +1,33 @@
-import { useEffect, useState, useRef } from "react";
-import { Loader } from "./index.js";
+import { useEffect, useState } from "react";
+import { Loader, Navbar, Footer } from "./index.js";
 import axios from "../api/axios.js";
 import "../styles/ResumePage.css";
 
 const ResumePage = () => {
   const [resumeURL, setResumeURL] = useState("");
+  const [resumeJPG, setResumeJPG] = useState("");
   const [loading, setLoading] = useState(true);
-  const [iframeLoading, setIframeLoading] = useState(false);
-  const iframeRef = useRef(null);
 
   useEffect(() => {
     const getResume = async () => {
-      const resumeURL = await axios.get("getResume");
-      setResumeURL(resumeURL.data.data);
+      const resume = await axios.get("getResume");
+      setResumeURL(resume.data.pdf);
+      setResumeJPG(resume.data.jgp);
       setLoading(false);
-      setIframeLoading(true);
     };
     getResume();
   }, []);
-
-  const handleIframeLoad = () => {
-    setIframeLoading(false);
-  };
-
   return (
     <div className="resume-container">
       {loading && <Loader message="fetching resume" />}
-      {iframeLoading && <Loader message="getting things ready" />}
+      <Navbar />
       {!loading && (
         <>
-          <iframe
-            src={resumeURL}
-            width="100%"
-            height="100%"
-            title="Resume Viewer"
-            ref={iframeRef}
-            onLoad={handleIframeLoad}
-          />
+          <button onClick={() => window.open(resumeURL)}>PDF</button>
+          <img src={resumeJPG} alt="resume" className="resume" />
         </>
       )}
+      <Footer />
     </div>
   );
 };
