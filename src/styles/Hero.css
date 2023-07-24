@@ -160,6 +160,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
+    height: 90vh;
     gap: 2rem;
     height: calc(100vh - 3rem);
     background-image: url("../assets/background_mobile.svg");
