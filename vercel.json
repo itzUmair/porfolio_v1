@@ -1,8 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/resume",
-      "destination": "https://muhammadumairkhan.vercel.app/resume"
+      "source": "/*",
+      "destination": "/"
     }
   ]
 }
