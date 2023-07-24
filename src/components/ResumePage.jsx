@@ -22,19 +22,22 @@ const ResumePage = () => {
   const handleIframeLoad = () => {
     setIframeLoading(false);
   };
+
   return (
     <div className="resume-container">
       {loading && <Loader message="fetching resume" />}
       {iframeLoading && <Loader message="getting things ready" />}
       {!loading && (
-        <iframe
-          src={resumeURL}
-          width="100%"
-          height="100%"
-          title="Resume Viewer"
-          ref={iframeRef}
-          onLoad={handleIframeLoad}
-        />
+        <>
+          <iframe
+            src={resumeURL}
+            width="100%"
+            height="100%"
+            title="Resume Viewer"
+            ref={iframeRef}
+            onLoad={handleIframeLoad}
+          />
+        </>
       )}
     </div>
   );
