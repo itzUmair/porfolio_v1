@@ -1,0 +1,155 @@
+.contact-section {
+  display: flex;
+}
+
+.contact-section > .left-side > p {
+  padding-inline-start: 1rem;
+}
+
+.contact-section > .left-side > .page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clr-300);
+  position: relative;
+}
+
+.contact-section > .left-side > .page-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.2rem;
+  width: 50%;
+  background-color: var(--clr-320);
+}
+
+.contact-section > .left-side > .contact-content {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-900);
+}
+
+.contact-section > .right-side > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section > .right-side > form > input,
+.contact-section > .right-side > form > textarea {
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: none;
+  border: 2px solid var(--clr-300);
+  background-color: transparent;
+  color: var(--clr-300);
+}
+
+.contact-section > .right-side > form > input::placeholder,
+.contact-section > .right-side > form > textarea::placeholder {
+  color: var(--clr-300);
+}
+
+.contact-section > .right-side > form > button {
+  width: fit-content;
+  align-self: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .contact-section {
+    padding-inline: 10rem;
+  }
+  .contact-section > .left-side {
+    max-width: 50%;
+  }
+  .contact-section > .left-side > .contact-content {
+    gap: 1rem;
+    padding-inline-start: 1rem;
+  }
+  .contact-section > .left-side > .page-title {
+    margin-block-end: 2rem;
+  }
+  .contact-section > .left-side > .page-title::after {
+    left: 12rem;
+  }
+  .contact-section > .right-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-section > .right-side > form {
+    gap: 1rem;
+    width: 80%;
+    margin-block-start: 4rem;
+  }
+  .contact-section > .right-side > form > textarea {
+    height: 10.5rem;
+    resize: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .contact-section {
+    padding-inline: 5rem;
+  }
+  .contact-section > .left-side {
+    max-width: 50%;
+  }
+  .contact-section > .left-side > .contact-content {
+    gap: 1rem;
+    padding-inline-start: 1rem;
+  }
+  .contact-section > .left-side > .page-title {
+    margin-block-end: 2rem;
+  }
+  .contact-section > .left-side > .page-title::after {
+    left: 12rem;
+  }
+  .contact-section > .right-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-section > .right-side > form {
+    gap: 1rem;
+    width: 80%;
+    margin-block-start: 4rem;
+  }
+  .contact-section > .right-side > form > textarea {
+    height: 10rem;
+    resize: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding-inline: 1rem;
+    flex-direction: column;
+  }
+  .contact-section > .left-side {
+    max-width: 100%;
+  }
+  .contact-section > .left-side > .page-title {
+    font-size: 1.5rem;
+    margin-block-end: 2rem;
+  }
+  .contact-section > .left-side > .page-title::after {
+    left: 9.5rem;
+  }
+  .contact-section > .right-side {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-section > .right-side > form {
+    gap: 1rem;
+    width: 100%;
+    margin-block-start: 2rem;
+  }
+  .contact-section > .right-side > form > textarea {
+    height: 10.5rem;
+    resize: none;
+  }
+}
