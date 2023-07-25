@@ -78,7 +78,7 @@
   .navbar-container > .nav-button {
     display: block;
     width: 1.75rem;
-    z-index: 1;
+    z-index: 9999;
   }
 
   .navbar-container > .mobile-nav-menu-container {
@@ -88,6 +88,7 @@
     background-color: var(--clr-300);
     width: 40vw;
     height: 100vh;
+    z-index: 999;
   }
   .menu-primary-enter {
     transform: translateX(110%);
