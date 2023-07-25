@@ -7,6 +7,33 @@ import Gmail from "../assets/gmail-logo.svg";
 
 import "../styles/Hero.css";
 const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    const socialLinksContainer = document.querySelector(
+      ".social-links-container"
+    );
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          socialLinksContainer.classList.add("contact-info");
+        } else {
+          socialLinksContainer.classList.remove("contact-info");
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const footerObserver = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    footerObserver.observe(footer);
+  }, []);
   const moveBG = (e) => {
     let oldPos = { x: 0, y: 0 };
     let x = Math.round(e.offsetX * 0.08);

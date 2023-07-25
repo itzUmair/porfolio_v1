@@ -91,6 +91,7 @@
 @media (min-width: 769px) and (max-width: 1023px) {
   .contact-section {
     padding-inline: 5rem;
+    padding-block-end: 2rem;
   }
   .contact-section > .left-side {
     max-width: 50%;

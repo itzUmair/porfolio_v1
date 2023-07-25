@@ -19,6 +19,7 @@ const About = ({ aboutRef }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <section ref={aboutRef} className="about-section">
       <h2 className="page-title">About Me</h2>

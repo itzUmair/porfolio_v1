@@ -47,6 +47,7 @@
 .hero-section > .social-links-container {
   display: flex;
   flex-direction: column;
+  transition: left 300ms ease-in;
 }
 
 .hero-section > .social-links-container > a {
@@ -130,26 +131,38 @@
     left: 4rem;
     gap: 1rem;
   }
-  .hero-section > .social-links-container {
+  .hero-section > .social-links-container.contact-info {
     position: fixed;
     left: 8rem;
   }
   .hero-section > .social-links-container > a:hover::after {
     display: block;
   }
-  .hero-section > .social-links-container > a::before {
+  .hero-section > .social-links-container.contact-info > a::after {
+    display: none;
+  }
+  .hero-section > .social-links-container.contact-info > a::before {
     content: attr(data-info);
     position: absolute;
     left: 3.5rem;
     top: 50%;
     text-align: left;
     transform: translateY(-50%);
-    color: var(--clr-100);
+    color: var(--clr-900);
     padding-inline: 0.5rem;
     padding-block: 0.25rem;
     font-weight: bold;
-    background-color: var(--clr-900);
-    display: none;
+    opacity: 0;
+    animation: fadein 400ms ease-in-out 500ms forwards;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -189,9 +202,23 @@
   }
   .hero-section > .social-links-container {
     position: fixed;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 2rem;
     gap: 1rem;
+  }
+  .hero-section > .social-links-container.contact-info > a::before {
+    content: attr(data-info);
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    text-align: left;
+    transform: translateY(-50%);
+    color: var(--clr-900);
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadein 400ms ease-in-out 500ms forwards;
   }
 }
 

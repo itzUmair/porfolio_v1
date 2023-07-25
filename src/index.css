@@ -110,4 +110,7 @@ body {
   .to-top.site-end-bump {
     bottom: 7rem;
   }
+  .to-top {
+    bottom: 6rem;
+  }
 }
