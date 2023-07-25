@@ -260,11 +260,40 @@
   .hero-section > .social-links-container::before {
     height: 115%;
   }
+  .hero-section > .social-links-container.contact-info::before {
+    height: 200%;
+  }
   .hero-section > .social-links-container {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
     gap: 1rem;
+  }
+  .hero-section > .social-links-container.contact-info {
+    position: fixed;
+    bottom: 7rem;
+    right: 0rem;
+    left: 1rem;
+    width: fit-content;
+  }
+
+  .hero-section > .social-links-container.contact-info {
+    opacity: 0;
+    animation: fadein 400ms ease-in-out 100ms forwards;
+  }
+  .hero-section > .social-links-container.contact-info > a::before {
+    content: attr(data-info);
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    text-align: left;
+    transform: translateY(-50%);
+    color: var(--clr-900);
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadein 400ms ease-in-out 500ms forwards;
   }
 }
 
