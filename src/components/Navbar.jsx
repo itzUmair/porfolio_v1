@@ -49,11 +49,6 @@ const Navbar = ({ scrollToRef, aboutRef, projectsRef, contactRef }) => {
         >
           <div className="mobile-nav-menu-container">
             <ul className="nav-menu">
-              <li
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Home
-              </li>
               <li onClick={() => scrollToRef(aboutRef)}>About</li>
               <li onClick={() => scrollToRef(projectsRef)}>Projects</li>
               <li onClick={() => scrollToRef(contactRef)}>Contact</li>

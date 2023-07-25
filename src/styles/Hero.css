@@ -83,7 +83,7 @@
   transform: translateX(-50%);
   width: 0.2rem;
   height: 130%;
-  background-color: var(--clr-300);
+  background-color: var(--clr-320);
 }
 
 .hero-section > .social-links-container > a > img {
