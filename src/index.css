@@ -4,8 +4,10 @@
   --clr-100: #f1faee;
   --clr-300: #8a4fff;
   --clr-310: #7343d5;
+  --clr-320: #b691ff;
   --clr-500: #587c71;
   --clr-900: #0f1108;
+  --clr-910: #0f110875;
 }
 
 body {
@@ -48,6 +50,34 @@ body {
 .cta-button:hover,
 .cta-button:focus {
   background-color: var(--clr-310);
+}
+
+.to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  outline: none;
+  border: none;
+  box-shadow: 0.2rem 0.35rem 0.5rem 0.1rem var(--clr-910);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.stt-btn-enter {
+  transform: translateX(150%);
+}
+.stt-btn-enter-active {
+  transform: translateX(0%);
+  transition: transform 300ms ease-in;
+}
+.stt-btn-exit {
+  transform: translateX(150%);
+  transition: transform 300ms ease-in;
+}
+.stt-btn-enter-exit-active {
 }
 
 @media (min-width: 2560px) {

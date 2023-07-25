@@ -1,8 +1,188 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section > .page-title,
+.about-section > .page-title-secondary {
+  color: var(--clr-300);
+  font-weight: bold;
+  position: relative;
+}
+
+.about-section > .page-title-secondary {
+  text-align: right;
+}
+
+.about-section > .page-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.2rem;
+  width: 50%;
+  background-color: var(--clr-320);
+}
+
+.about-section > .page-title-secondary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.2rem;
+  width: 50%;
+  background-color: var(--clr-320);
+}
+
+.about-section > .about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section > .about-text > .cta-button {
+  width: fit-content;
+}
+
+.about-section > .about-text > p {
+  color: var(--clr-900);
+}
+
+.about-section > .skills-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-section > .skills-section .page-subtitle {
+  text-transform: capitalize;
+  color: var(--clr-300);
+  font-weight: bold;
+  margin-block-end: 1.5rem;
+}
+
+.about-section > .skills-section .skills {
+  display: flex;
+}
+
+.about-section > .skills-section .skills > ul > li {
+  list-style-image: url("../assets/bullet.svg");
+}
+
 @media (min-width: 1024px) {
+  .about-section {
+    padding-inline: 10rem;
+    padding-block: 5rem;
+  }
+  .about-section > .page-title,
+  .about-section > .page-title-secondary {
+    font-size: 2rem;
+  }
+  .about-section > .about-text {
+    padding-block: 2rem;
+  }
+  .about-section > .page-title::after {
+    left: 10rem;
+  }
+  .about-section > .page-title-secondary::after {
+    right: 13rem;
+  }
+  .about-section > .about-text {
+    gap: 0.5rem;
+    padding-inline-start: 1rem;
+    max-width: 45rem;
+  }
+  .about-section > .about-text > .cta-button {
+    margin-block-start: 1rem;
+  }
+  .about-section > .skills-section {
+    padding-block: 2rem;
+    padding-inline-end: 2rem;
+    gap: 10rem;
+  }
+  .about-section > .skills-section .skills {
+    gap: 6rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+  .about-section {
+    padding-inline: 5rem;
+    padding-block: 5rem;
+  }
+  .about-section > .page-title,
+  .about-section > .page-title-secondary {
+    font-size: 1.5rem;
+  }
+  .about-section > .about-text {
+    padding-block: 2rem;
+  }
+  .about-section > .page-title::after {
+    left: 8rem;
+  }
+  .about-section > .page-title-secondary::after {
+    right: 10rem;
+  }
+  .about-section > .about-text {
+    gap: 0.5rem;
+    padding-inline-start: 1rem;
+    max-width: 45rem;
+  }
+  .about-section > .about-text > .cta-button {
+    margin-block-start: 1rem;
+  }
+  .about-section > .skills-section {
+    padding-block: 2rem;
+    padding-inline-end: 1rem;
+    gap: 10rem;
+  }
+  .about-section > .skills-section .skills {
+    gap: 4rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .about-section {
+    padding-inline: 1rem;
+    padding-block: 5rem;
+  }
+  .about-section > .page-title,
+  .about-section > .page-title-secondary {
+    font-size: 1.5rem;
+  }
+  .about-section > .about-text {
+    padding-block: 2rem;
+  }
+  .about-section > .page-title::after {
+    left: 8rem;
+  }
+  .about-section > .page-title-secondary::after {
+    right: 10rem;
+  }
+  .about-section > .about-text {
+    gap: 0.5rem;
+    padding-inline-start: 1rem;
+    max-width: 100%;
+  }
+  .about-section > .about-text > .cta-button {
+    margin-block-start: 1rem;
+  }
+  .about-section > .skills-section {
+    padding-block: 1rem;
+    padding-inline-end: 0rem;
+    padding-inline-start: 1.5rem;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .about-section > .skills-section .skills {
+    gap: 6rem;
+    line-height: 1.75rem;
+  }
+  .about-section > .skills-section .skills.tools {
+    gap: 7.7rem;
+  }
+  .about-section > .skills-section > .page-subtitle {
+    margin-block-end: 1rem;
+  }
 }

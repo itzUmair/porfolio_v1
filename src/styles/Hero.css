@@ -73,12 +73,11 @@
   padding-block: 0.25rem;
   font-weight: bold;
   background-color: var(--clr-900);
-  opacity: 0;
-  transition: opacity 300ms ease-in;
+  display: none;
 }
 
 .hero-section > .social-links-container > a:hover::after {
-  opacity: 1;
+  display: block;
 }
 
 .hero-section > .social-links-container::before {
