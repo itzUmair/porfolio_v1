@@ -58,6 +58,27 @@
   border-radius: 50%;
   padding: 0.75rem;
   z-index: 100;
+  position: relative;
+}
+
+.hero-section > .social-links-container > a::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 3.5rem;
+  top: 50%;
+  text-align: left;
+  transform: translateY(-50%);
+  color: var(--clr-100);
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  font-weight: bold;
+  background-color: var(--clr-900);
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.hero-section > .social-links-container > a:hover::after {
+  opacity: 1;
 }
 
 .hero-section > .social-links-container::before {

@@ -51,16 +51,22 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
         onClick={() => scrollToRef(aboutRef)}
       />
       <div className="social-links-container">
-        <a href="/resume" target="_blank" rel="noreferrer">
+        <a href="/resume" target="_blank" rel="noreferrer" data-title="Resume">
           <img src={Resume} alt="resume" />
         </a>
-        <a href="https://github.com/itzUmair" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/itzUmair"
+          target="_blank"
+          rel="noreferrer"
+          data-title="Github"
+        >
           <img src={Github} alt="github" />
         </a>
         <a
           href="https://linkedin.com/in/umair2511"
           target="_blank"
           rel="noreferrer"
+          data-title="LinkedIn"
         >
           <img src={Linkedin} alt="linkedin" />
         </a>
@@ -68,6 +74,7 @@ const Hero = ({ scrollToRef, projectsRef, aboutRef }) => {
           href={"mailto:muhammadumair2511@gmail.com"}
           target="_blank"
           rel="noreferrer"
+          data-title="Gmail"
         >
           <img src={Gmail} alt="Gmail" />
         </a>
