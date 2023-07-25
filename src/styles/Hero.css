@@ -76,10 +76,6 @@
   display: none;
 }
 
-.hero-section > .social-links-container > a:hover::after {
-  display: block;
-}
-
 .hero-section > .social-links-container::before {
   content: "";
   position: absolute;
@@ -133,6 +129,9 @@
     bottom: 4rem;
     left: 4rem;
     gap: 1rem;
+  }
+  .hero-section > .social-links-container > a:hover::after {
+    display: block;
   }
 }
 
