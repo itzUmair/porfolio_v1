@@ -130,8 +130,26 @@
     left: 4rem;
     gap: 1rem;
   }
+  .hero-section > .social-links-container {
+    position: fixed;
+    left: 8rem;
+  }
   .hero-section > .social-links-container > a:hover::after {
     display: block;
+  }
+  .hero-section > .social-links-container > a::before {
+    content: attr(data-info);
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    text-align: left;
+    transform: translateY(-50%);
+    color: var(--clr-100);
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    font-weight: bold;
+    background-color: var(--clr-900);
+    display: none;
   }
 }
 

@@ -55,7 +55,7 @@ body {
 
 .to-top {
   position: fixed;
-  bottom: 2rem;
+  bottom: 3rem;
   right: 2rem;
   padding: 0.5rem;
   background-color: white;
@@ -65,6 +65,7 @@ body {
   box-shadow: 0.2rem 0.35rem 0.5rem 0.1rem var(--clr-910);
   z-index: 9999;
   cursor: pointer;
+  transition: bottom 300ms ease-in-out;
 }
 
 .stt-btn-enter {
@@ -104,5 +105,9 @@ body {
   .cta-button {
     border-radius: 0.5rem;
     padding: 0.5rem 1.5rem;
+  }
+
+  .to-top.site-end-bump {
+    bottom: 7rem;
   }
 }
