@@ -1,0 +1,59 @@
+.projects-section > .page-title {
+  color: var(--clr-300);
+  font-weight: bold;
+  position: relative;
+}
+
+.projects-section > .page-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.2rem;
+  width: 50%;
+  background-color: var(--clr-320);
+}
+
+.projects-section > .cta-button {
+  width: fit-content;
+  align-self: center;
+}
+
+@media (min-width: 1024px) {
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 10rem;
+    margin-block-end: 10rem;
+  }
+  .projects-section > .page-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 6rem;
+    margin-block-end: 5rem;
+  }
+  .projects-section > .page-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 1rem;
+    margin-block-end: 5rem;
+  }
+  .projects-section > .page-title {
+    font-size: 2rem;
+  }
+}
