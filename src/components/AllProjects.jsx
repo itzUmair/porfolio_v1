@@ -1,5 +1,40 @@
+import { useEffect, useState } from "react";
+import { Navbar, Footer, AllProjectsCard } from "./index";
+import axios from "../api/axios";
+import "../styles/AllProjects.css";
 const AllProjects = () => {
-  return <div>AllProjects</div>;
+  const [allProjects, setAllProjects] = useState([]);
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const projects = await axios.get("getAllProjects");
+        setAllProjects(projects.data);
+      } catch (error) {
+        console.log("something went wrong");
+      }
+    };
+    getProjects();
+  }, []);
+  return (
+    <section className="all-projects-section">
+      <Navbar />
+      <h2 className="page-title">All Projects</h2>
+      <div className="projects-container">
+        {allProjects.map((project) => (
+          <AllProjectsCard
+            key={project._id}
+            name={project.name}
+            githubLink={project.repository}
+            siteLink={project.url}
+            techStack={project.techStack}
+            desc={project.description}
+            cover={project.coverImageURL}
+          />
+        ))}
+      </div>
+      <Footer />
+    </section>
+  );
 };
 
 export default AllProjects;

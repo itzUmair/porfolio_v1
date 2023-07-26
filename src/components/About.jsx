@@ -3,7 +3,7 @@ import TopArrow from "../assets/top_arrow.svg";
 import { CSSTransition } from "react-transition-group";
 import "../styles/About.css";
 
-const About = ({ aboutRef }) => {
+const About = ({ scrollToRef, projectsRef, aboutRef }) => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +37,9 @@ const About = ({ aboutRef }) => {
           mine. Now, I&apos;m wholeheartedly pursuing web development as my
           chosen profession, fueled by my unwavering enthusiasm and dedication.
         </p>
-        <button className="cta-button">My Work</button>
+        <button className="cta-button" onClick={() => scrollToRef(projectsRef)}>
+          My Work
+        </button>
       </div>
       <h2 className="page-title-secondary">Skills I Know</h2>
       <div className="skills-section">

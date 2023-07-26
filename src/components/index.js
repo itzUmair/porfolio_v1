@@ -9,3 +9,4 @@ export { default as Footer } from "./Footer";
 export { default as ResumePage } from "./ResumePage";
 export { default as Loader } from "./Loader";
 export { default as ProjectCard } from "./ProjectCard";
+export { default as AllProjectsCard } from "./AllProjectsCard";
