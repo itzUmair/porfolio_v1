@@ -154,6 +154,8 @@
     font-weight: bold;
     opacity: 0;
     animation: fadein 400ms ease-in-out 500ms forwards;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
   }
 }
 
@@ -219,6 +221,8 @@
     font-weight: bold;
     opacity: 0;
     animation: fadein 400ms ease-in-out 500ms forwards;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
   }
 }
 
@@ -294,6 +298,8 @@
     font-weight: bold;
     opacity: 0;
     animation: fadein 400ms ease-in-out 500ms forwards;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
   }
 }
 

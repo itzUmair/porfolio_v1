@@ -1,4 +1,8 @@
 import { useState } from "react";
+import Resume from "../assets/resume-icon.svg";
+import Github from "../assets/github-logo.svg";
+import Linkedin from "../assets/linkedin-logo.svg";
+import Gmail from "../assets/gmail-logo.svg";
 import "../styles/Contact.css";
 
 const Contact = ({ contactRef }) => {
@@ -65,6 +69,32 @@ const Contact = ({ contactRef }) => {
             <p>Best regards,</p>
             <p>Muhammad Umair Khan</p>
           </span>
+          <div className="contact-info-large-screen">
+            <a href="/resume" target="_blank" rel="noreferrer">
+              <img src={Resume} alt="resume" /> Resume
+            </a>
+            <a
+              href="https://github.com/itzUmair"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={Github} alt="github" /> github.com/itzUmair
+            </a>
+            <a
+              href="https://linkedin.com/in/umair2511"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={Linkedin} alt="linkedin" /> linkedin.com/in/umair2511
+            </a>
+            <a
+              href={"mailto:muhammadumair2511@gmail.com"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={Gmail} alt="Gmail" /> muhammadumair2511@gmail.com
+            </a>
+          </div>
         </div>
       </div>
       <div className="right-side">

@@ -85,6 +85,9 @@ body {
     max-width: 1440px;
     margin: 0 auto;
   }
+  .to-top {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -108,9 +111,14 @@ body {
   }
 
   .to-top.site-end-bump {
-    bottom: 7rem;
+    bottom: 10rem;
   }
   .to-top {
-    bottom: 6rem;
+    bottom: 9rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .to-top > img {
+    width: 1.5rem;
   }
 }
