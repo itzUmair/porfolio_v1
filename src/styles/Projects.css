@@ -30,6 +30,9 @@
   .projects-section > .page-title {
     font-size: 2rem;
   }
+  .projects-section > .page-title::after {
+    left: 9rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -43,6 +46,9 @@
   .projects-section > .page-title {
     font-size: 2rem;
   }
+  .projects-section > .page-title::after {
+    left: 9rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -54,6 +60,9 @@
     margin-block-end: 5rem;
   }
   .projects-section > .page-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  .projects-section > .page-title::after {
+    left: 7rem;
   }
 }

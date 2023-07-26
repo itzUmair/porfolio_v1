@@ -7,6 +7,7 @@ const ResumePage = () => {
   const [resumeURL, setResumeURL] = useState("");
   const [resumeJPG, setResumeJPG] = useState("");
   const [loading, setLoading] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const getResume = async () => {
@@ -24,10 +25,15 @@ const ResumePage = () => {
       {!loading && (
         <>
           <button onClick={() => window.open(resumeURL)}>Download PDF</button>
-          <img src={resumeJPG} alt="resume" className="resume" />
+          <img
+            src={resumeJPG}
+            alt="resume"
+            className="resume"
+            onLoad={() => setImageLoaded(true)}
+          />
+          {imageLoaded && <Footer />}
         </>
       )}
-      <Footer />
     </div>
   );
 };

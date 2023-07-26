@@ -11,7 +11,6 @@ const Projects = ({ projectsRef }) => {
       try {
         const projects = await axios.get("getTopProjects");
         setTopProjects(projects.data);
-        console.log(topProjects);
       } catch (error) {
         setMessage("Something went wrong. Please reload the site");
       }
