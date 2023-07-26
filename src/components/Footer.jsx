@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Copyright from "../assets/copyright-icon.svg";
 import "../styles/Footer.css";
 const Footer = () => {

@@ -13,6 +13,7 @@ const Contact = ({ contactRef }) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (event) => {
+    setErrorMessage("");
     const { name, value } = event.target;
     if (name === "name") {
       setName(value);
@@ -55,7 +56,6 @@ const Contact = ({ contactRef }) => {
       setName("");
       setEmail("");
       setMessage("");
-      setErrorMessage("Message sent successfully!");
     }
   };
 
@@ -130,7 +130,7 @@ const Contact = ({ contactRef }) => {
             maxLength="200"
             name="message"
           />
-          {errorMessage && <p>{errorMessage}</p>}
+          {errorMessage && <p className="message">{errorMessage}</p>}
           <button type="submit" className="cta-button" onClick={handleSubmit}>
             Say Hi!
           </button>

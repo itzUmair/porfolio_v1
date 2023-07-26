@@ -54,6 +54,12 @@
   align-self: flex-end;
 }
 
+.contact-section > .right-side > form > .message {
+  background-color: var(--clr-300);
+  color: var(--clr-100);
+  padding: 0.5rem;
+}
+
 @media (min-width: 2560px) {
   .contact-section {
     padding-inline: 10rem;
