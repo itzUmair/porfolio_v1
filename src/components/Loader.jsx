@@ -1,8 +1,9 @@
+import LoadAnimation from "../assets/loader.svg";
 import "../styles/Loader.css";
 const Loader = ({ message }) => {
   return (
     <div className="loader-container">
-      {/*<img /> TODO: add a loader svg with animations*/}
+      <img src={LoadAnimation} />
       <p className="loading-message">{message}</p>
     </div>
   );

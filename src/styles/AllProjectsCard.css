@@ -84,6 +84,8 @@
   }
   .all-projects-card > img {
     height: 10rem;
+    width: 20rem;
+    background-color: #c3c3c3;
   }
   .all-projects-card > .details {
     gap: 0.5rem;
@@ -106,6 +108,7 @@
     flex-direction: column;
   }
   .all-projects-card > img {
+    aspect-ratio: 2/1;
     width: 70vw;
   }
   .all-projects-card > .details {
