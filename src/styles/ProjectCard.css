@@ -28,7 +28,7 @@
 }
 
 .project-card > .details > .header > a > img {
-  width: 1rem;
+  width: 1.5rem;
 }
 
 .project-card:nth-child(odd) > .details > .header {
@@ -140,7 +140,6 @@
     max-width: 100%;
     flex-direction: column;
   }
-
   .project-card:nth-child(odd) > .details > .header {
     justify-content: flex-start;
   }
