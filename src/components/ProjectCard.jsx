@@ -16,10 +16,10 @@ const ProjectCard = ({
       <div className="details">
         <div className="header">
           <h3 className="project-name">{name}</h3>
-          <a href={githubLink} target="_blank" rel="noreferrer">
+          <a href={githubLink} target="_blank" rel="noreferrer" title="Github">
             <img src={Github} alt="" />
           </a>
-          <a href={siteLink} target="_blank" rel="noreferrer">
+          <a href={siteLink} target="_blank" rel="noreferrer" title="Site">
             <img src={Visit} alt="" />
           </a>
         </div>
