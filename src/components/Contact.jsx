@@ -4,6 +4,7 @@ import Github from "../assets/github-logo.svg";
 import Linkedin from "../assets/linkedin-logo.svg";
 import Gmail from "../assets/gmail-logo.svg";
 import "../styles/Contact.css";
+import axios from "../api/axios";
 
 const Contact = ({ contactRef }) => {
   const [name, setName] = useState("");
@@ -32,7 +33,7 @@ const Contact = ({ contactRef }) => {
     return nameRegex.test(name);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) {
       setErrorMessage("Please fill out all fields.");
@@ -41,9 +42,16 @@ const Contact = ({ contactRef }) => {
     } else if (!isValidName) {
       setErrorMessage("Please enter a valid name.");
     } else {
-      // Submit the form or send the data to your backend server
-      // (Remember to use parameterized queries on the server-side to prevent SQL injections)
-      // For this example, we'll just clear the form and show a success message:
+      try {
+        const response = await axios.post("/addMessage", {
+          name,
+          email,
+          message,
+        });
+        setErrorMessage(response.data.message);
+      } catch (error) {
+        setErrorMessage(error);
+      }
       setName("");
       setEmail("");
       setMessage("");
