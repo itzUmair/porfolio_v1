@@ -1,0 +1,23 @@
+.primary-content-enter {
+  transform: translateY(50%);
+}
+.primary-content-enter-active {
+  transform: translateY(0%);
+  transition: transform 500ms ease;
+}
+.primary-content-exit-active {
+  transform: translateY(50%);
+  transition: transform 500ms ease;
+}
+
+.intro-enter {
+  opacity: 0;
+}
+.intro-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.intro-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}

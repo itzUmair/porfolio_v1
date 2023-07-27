@@ -10,7 +10,6 @@ import "../styles/Navbar.css";
 const Navbar = ({ scrollToRef, aboutRef, projectsRef, contactRef }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const onHomePage = window.location.href.endsWith("/");
-  console.log(onHomePage);
   const navigate = useNavigate();
   useEffect(() => {
     window.addEventListener("scroll", () => {
