@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  user-select: none;
 }
 
 .not-found-container > h2 {

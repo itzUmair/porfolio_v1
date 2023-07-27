@@ -10,4 +10,5 @@
   justify-content: center;
   background-color: var(--clr-300);
   z-index: 1000;
+  user-select: none;
 }

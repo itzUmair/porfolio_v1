@@ -2,6 +2,7 @@
   color: var(--clr-300);
   font-weight: bold;
   position: relative;
+  user-select: none;
 }
 
 .projects-section > .page-title::after {

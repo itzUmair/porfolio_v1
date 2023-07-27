@@ -2,6 +2,7 @@
   display: flex;
   color: var(--clr-900);
   position: relative;
+  user-select: none;
 }
 
 .project-card:nth-child(odd) {

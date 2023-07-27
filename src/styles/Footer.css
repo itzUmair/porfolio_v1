@@ -3,6 +3,7 @@ footer {
   background-color: var(--clr-300);
   color: var(--clr-100);
   margin-top: 6rem;
+  user-select: none;
 }
 footer > p {
   display: flex;

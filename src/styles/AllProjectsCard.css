@@ -1,6 +1,7 @@
 .all-projects-card {
   display: flex;
   position: relative;
+  user-select: none;
 }
 
 .all-projects-card > .details {

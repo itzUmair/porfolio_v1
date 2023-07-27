@@ -2,6 +2,7 @@ iframe {
   height: 100vh;
   outline: none;
   border: none;
+  user-select: none;
 }
 
 .resume-container > button {
