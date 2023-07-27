@@ -54,11 +54,11 @@ const About = ({ scrollToRef, projectsRef, aboutRef }) => {
               <li>Express.js</li>
             </ul>
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
+              <li>React.js</li>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>Figma</li>
+              <li>WordPress</li>
             </ul>
           </div>
         </div>
