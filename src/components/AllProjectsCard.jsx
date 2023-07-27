@@ -1,5 +1,3 @@
-import Github from "../assets/github_link.svg";
-import Visit from "../assets/visit_button.svg";
 import "../styles/AllProjectsCard.css";
 
 const AllProjectsCard = ({
